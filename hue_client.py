@@ -81,11 +81,11 @@ def get_schedule_instances() -> list[dict]:
 
 def resolve_scene_ref(room_rid: str, scene_name: str, scenes_by_room: dict) -> dict:
     """Resolve a scene name to a recall dict (recipe or room-specific scene)."""
-    if scene_name in RECIPES:
-        return {"rid": RECIPES[scene_name], "rtype": "recipe"}
     room_scenes = scenes_by_room.get(room_rid, {})
     if scene_name in room_scenes:
         return {"rid": room_scenes[scene_name], "rtype": "scene"}
+    if scene_name in RECIPES:
+        return {"rid": RECIPES[scene_name], "rtype": "recipe"}
     raise ValueError(f"Scene '{scene_name}' not found for room {room_rid}")
 
 

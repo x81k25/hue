@@ -45,4 +45,31 @@ HUE_API_BASE=http://localhost:8000 streamlit run app.py
 
 GitLab CI builds `192.168.50.2:5050/infra/experiments/hue:main` on push to `main`.
 ArgoCD picks up the manifests in `/infra/k8s-manifests/experiments/hue/` and deploys.
-Reach the UI at `http://hue.x81/` and the API at `http://hue.x81/api/`.
+Reach the UI at `http://hue.x81/` and the API at `http://hue-api.x81/`.
+
+## Scene recall examples
+
+Activate a scene on a room immediately via `POST /scene/recall`.
+
+Linux / macOS:
+
+```bash
+curl -X POST http://hue-api.x81/scene/recall \
+  -H "Content-Type: application/json" \
+  -d '{"room":"6std","scene":"Relax"}'
+```
+
+Windows PowerShell:
+
+```powershell
+Invoke-RestMethod -Uri http://hue-api.x81/scene/recall `
+  -Method Post `
+  -ContentType 'application/json' `
+  -Body '{"room":"6std","scene":"Relax"}'
+```
+
+Windows cmd (`curl.exe` ships with Windows 10+):
+
+```cmd
+curl.exe -X POST http://hue-api.x81/scene/recall -H "Content-Type: application/json" -d "{\"room\":\"6std\",\"scene\":\"Relax\"}"
+```
