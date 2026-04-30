@@ -73,3 +73,17 @@ Windows cmd (`curl.exe` ships with Windows 10+):
 ```cmd
 curl.exe -X POST http://hue-api.x81/scene/recall -H "Content-Type: application/json" -d "{\"room\":\"6std\",\"scene\":\"Relax\"}"
 ```
+
+## Room power examples
+
+Turn a room's lights on/off via `POST /room/off` and `POST /room/on` (off is a power state, not a scene).
+
+```bash
+curl -X POST http://hue-api.x81/room/off \
+  -H "Content-Type: application/json" \
+  -d '{"room":"6std"}'
+```
+
+```cmd
+curl.exe -X POST http://hue-api.x81/room/off -H "Content-Type: application/json" -d "{\"room\":\"6std\"}"
+```

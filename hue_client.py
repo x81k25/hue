@@ -147,3 +147,18 @@ def delete_schedule(rid: str) -> dict:
 def recall_scene(scene_rid: str) -> dict:
     """Activate a scene immediately on its associated room/zone."""
     return _put("scene", scene_rid, {"recall": {"action": "active"}})
+
+
+def get_room_grouped_light(room_rid: str) -> str:
+    """Return the grouped_light rid for a room."""
+    for gl in _get("grouped_light"):
+        owner = gl.get("owner", {})
+        if owner.get("rid") == room_rid and owner.get("rtype") == "room":
+            return gl["id"]
+    raise ValueError(f"no grouped_light found for room {room_rid}")
+
+
+def set_room_power(room_rid: str, on: bool) -> dict:
+    """Turn a room's lights on or off via its grouped_light."""
+    gl_rid = get_room_grouped_light(room_rid)
+    return _put("grouped_light", gl_rid, {"on": {"on": on}})

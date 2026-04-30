@@ -44,6 +44,10 @@ class RecallRequest(BaseModel):
     scene: str
 
 
+class RoomPowerRequest(BaseModel):
+    room: str
+
+
 # ── helpers ───────────────────────────────────────────────────────────────
 
 def _load_yaml(path) -> dict:
@@ -277,3 +281,21 @@ def recall_scene(req: RecallRequest) -> dict:
         status_code=400,
         detail="recipe recall not supported; use a room-specific scene",
     )
+
+
+@app.post("/room/off")
+def room_off(req: RoomPowerRequest) -> dict:
+    """Turn all lights in a room off."""
+    rooms = hue_client.get_rooms()
+    if req.room not in rooms:
+        raise HTTPException(status_code=404, detail=f"room '{req.room}' not found")
+    return hue_client.set_room_power(rooms[req.room], on=False)
+
+
+@app.post("/room/on")
+def room_on(req: RoomPowerRequest) -> dict:
+    """Turn all lights in a room on (uses last state)."""
+    rooms = hue_client.get_rooms()
+    if req.room not in rooms:
+        raise HTTPException(status_code=404, detail=f"room '{req.room}' not found")
+    return hue_client.set_room_power(rooms[req.room], on=True)
