@@ -1,0 +1,37 @@
+schedules:
+- name: 0600-bright_50
+  hour: 6
+  minute: 0
+  scene: bright_50
+  rooms:
+  - 5den
+  - 5kcn
+  - 5din
+  days:
+  - monday
+  - tuesday
+  - wednesday
+  - thursday
+  - friday
+  - saturday
+  - sunday
+  transition_minutes: 60
+  enabled: true
+- name: 0600-bright_50
+  hour: 6
+  minute: 0
+  scene: bright_50
+  rooms:
+  - 5clt
+  - 5den
+  - 5din
+  days:
+  - monday
+  - tuesday
+  - wednesday
+  - thursday
+  - friday
+  - saturday
+  - sunday
+  transition_minutes: 60
+  enabled: true

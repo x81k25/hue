@@ -1,0 +1,153 @@
+# scene definitions: full name, abbreviated name, hex color
+# abbreviated names are used in routine naming conventions
+
+scenes:
+  # ── standard ──
+  - name: Bright
+    abbr: brt
+    color: "#FFC700"
+    category: standard
+  - name: Concentrate
+    abbr: cnt
+    color: "#FFF8C9"
+    category: standard
+  - name: Energize
+    abbr: nrg
+    color: "#FFFF15"
+    category: standard
+  - name: Read
+    abbr: rd
+    color: "#FFD000"
+    category: standard
+  - name: Relax
+    abbr: rlx
+    color: "#FFAA39"
+    category: standard
+  - name: Dimmed
+    abbr: dim
+    color: "#4B3B00"
+    category: standard
+  - name: Nightlight
+    abbr: nlt
+    color: "#261500"
+    category: standard
+  - name: Rest
+    abbr: rst
+    color: "#FF7700"
+    category: standard
+  - name: brt50
+    abbr: b50
+    color: "#7E6300"
+    category: standard
+  - name: bright_50
+    abbr: b5a
+    color: "#795F00"
+    category: standard
+  - name: brt-25
+    abbr: b25
+    color: "#403200"
+    category: standard
+  - name: brt_quiet
+    abbr: bq
+    color: "#1A1A2E"
+    category: standard
+  - name: cnt-quiet
+    abbr: cq
+    color: "#1A1A2E"
+    category: standard
+  - name: rlx-quiet
+    abbr: rq
+    color: "#1A1A2E"
+    category: standard
+  - name: night-quiet
+    abbr: nq
+    color: "#1A1A2E"
+    category: standard
+  - name: nightlight-plus
+    abbr: nlp
+    color: "#000000"
+    category: standard
+  - name: Lamp only
+    abbr: lmp
+    color: "#1A1A2E"
+    category: standard
+  - name: Reading light
+    abbr: rdl
+    color: "#1A1A2E"
+    category: standard
+  - name: Chill night
+    abbr: chn
+    color: "#1A1A2E"
+    category: standard
+
+  # ── colorful ──
+  - name: Spring blossom
+    abbr: spb
+    color: "#D6FF09"
+    category: colorful
+  - name: Tropical twilight
+    abbr: ttw
+    color: "#7AA60A"
+    category: colorful
+  - name: Savanna sunset
+    abbr: svs
+    color: "#C79B00"
+    category: colorful
+  - name: Arctic aurora
+    abbr: aau
+    color: "#89BA0C"
+    category: colorful
+  - name: Soho
+    abbr: sho
+    color: "#FFC700"
+    category: colorful
+  - name: Fairfax
+    abbr: ffx
+    color: "#FF006D"
+    category: colorful
+  - name: Under the tree
+    abbr: utt
+    color: "#ED9500"
+    category: colorful
+  - name: Cancun
+    abbr: ccn
+    color: "#FF0087"
+    category: colorful
+  - name: cosmos
+    abbr: cos
+    color: "#1A1A2E"
+    category: colorful
+  - name: purple
+    abbr: prp
+    color: "#FF00FF"
+    category: colorful
+  - name: orange
+    abbr: org
+    color: "#FFC100"
+    category: colorful
+  - name: Red
+    abbr: red
+    color: "#FF0000"
+    category: colorful
+  - name: sexy_time
+    abbr: sxt
+    color: "#FF00FF"
+    category: colorful
+  - name: sxy_tim
+    abbr: sxm
+    color: "#FF00D6"
+    category: colorful
+  - name: prizm
+    abbr: pzm
+    color: "#44AACC"
+    category: colorful
+  - name: on
+    abbr: "on"
+    color: "#FFC700"
+    category: colorful
+
+  # ── special states ──
+  - name: "Off"
+    abbr: "off"
+    color: "#000000"
+    category: special

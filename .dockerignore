@@ -1,0 +1,12 @@
+.venv
+__pycache__
+**/__pycache__
+*.pyc
+.env
+.git
+.gitignore
+.claude
+.dockerignore
+Dockerfile
+README.md
+.gitlab-ci.yml

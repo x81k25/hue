@@ -1,0 +1,49 @@
+rooms:
+  0bck:
+    rid: 594befb6-bc89-46cd-81d7-1fc3ce2a8d69
+    archetype: garden
+  1bed:
+    rid: ba5ce606-2333-4d66-8839-f48c52391d17
+    archetype: bedroom
+  1bth:
+    rid: 7972c5af-472d-461d-b41a-e7e287364cc5
+    archetype: bathroom
+  1clt:
+    rid: 62e9688e-1841-4ae5-aa8e-a8264fca7ce2
+    archetype: closet
+  2bed:
+    rid: 29a583db-8396-43f1-a95d-6d81d75967ea
+    archetype: bedroom
+  3bed:
+    rid: e0188ef5-2f08-4c56-aa7a-ccb9aedfd931
+    archetype: bedroom
+  4bth:
+    rid: 5b75d9b6-8e60-4ffb-8a48-e7bec6ad3d44
+    archetype: bathroom
+  4hal:
+    rid: c07b9116-682d-402a-92d4-147c5458a680
+    archetype: hallway
+  4lnd:
+    rid: ddd7a2a0-9daf-45d8-b6d8-dfd91ff783a8
+    archetype: laundry_room
+  5clt:
+    rid: 92168dcc-7a2e-4ff4-a7d4-be0c242630e8
+    archetype: closet
+  5den:
+    rid: 85a2ab5a-0af9-4e48-a5fc-a1b6546fcdd1
+    archetype: living_room
+  5din:
+    rid: 01a5a61a-1417-4e56-b7de-60b1fa40012e
+    archetype: dining
+  5kcn:
+    rid: 2d0c21ae-d2a9-4f15-b132-117bf8cf2d21
+    archetype: kitchen
+  6std:
+    rid: c8ad69b0-b158-4e53-b1f8-b4d33787a06b
+    archetype: office
+  7grg:
+    rid: 8b7f13cc-0270-4d3a-af0b-a13260a9cfc9
+    archetype: garage
+  9ent:
+    rid: 1e61759f-0179-4a54-ab37-a6be0ce0cd95
+    archetype: tv
