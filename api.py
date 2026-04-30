@@ -25,7 +25,7 @@ from paths import (
     SCENES_PATH,
 )
 
-app = FastAPI(title="Hue Schedule Manager API", root_path="/api")
+app = FastAPI(title="Hue Schedule Manager API")
 
 
 # ── models ────────────────────────────────────────────────────────────────
