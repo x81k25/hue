@@ -1,6 +1,7 @@
 """Export resolved bridge state to current_state.yaml with explicit point values."""
 
 import yaml
+from pathlib import Path
 from sync import get_current_bridge_rules
 from schedule_model import ALL_DAYS
 from paths import CURRENT_STATE_PATH as STATE_FILE, FUTURE_STATE_PATH as FUTURE_STATE_FILE
