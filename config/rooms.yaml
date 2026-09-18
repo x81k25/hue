@@ -47,3 +47,16 @@ rooms:
   9ent:
     rid: 1e61759f-0179-4a54-ab37-a6be0ce0cd95
     archetype: tv
+  2clt:
+    rid: f2357430-d481-45dd-96f9-9d8624d122c2
+    archetype: other
+  # zones (bridge rtype "zone"): recall + on/off work like rooms
+  downstairs:
+    rid: 4cc4a179-b2e5-40ce-ac93-a9adeb878d1e
+    archetype: downstairs
+  den+kcn:
+    rid: 92b163d0-8cb9-4b37-86a0-467579912edf
+    archetype: tv
+  liv_zon:
+    rid: bc78cd76-a769-47f9-9a78-78d01929baa7
+    archetype: downstairs

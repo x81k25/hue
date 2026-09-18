@@ -272,7 +272,12 @@ def recall_scene(req: RecallRequest) -> dict:
         raise HTTPException(status_code=404, detail=f"room '{req.room}' not found")
     room_rid = rooms[req.room]
     scenes_by_room = hue_client.get_scenes_by_room()
-    scene_ref = hue_client.resolve_scene_ref(room_rid, req.scene, scenes_by_room)
+    try:
+        scene_ref = hue_client.resolve_scene_ref(room_rid, req.scene, scenes_by_room)
+    except ValueError:
+        raise HTTPException(
+            status_code=404, detail=f"scene '{req.scene}' not found for room '{req.room}'"
+        )
     if scene_ref["rtype"] == "scene":
         return hue_client.recall_scene(scene_ref["rid"])
     # recipes can't be recalled directly via PUT on /scene; create a one-shot via

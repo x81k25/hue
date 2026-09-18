@@ -5,6 +5,18 @@ Hue Bridge schedule manager. Two-component app deployed as one image, two pod co
 - **API** (`api.py`, FastAPI on :8000) — wraps the Hue CLIP v2 API and owns all state files. The desktop client and the UI both call this.
 - **UI** (`app.py` + `pages/`, Streamlit on :8501) — thin client of the API; no bridge access, no file I/O.
 
+## Rules for callers
+
+- **Always go through the API (`http://hue-api.x81`), never the bridge directly** — the API owns the
+  bridge key, the CLIP v2 calls and `config/rooms.yaml`. The Streamlit UI is itself just a client.
+- The simple commands are `POST /scene/recall {room, scene}` and `POST /room/on|off {room}`.
+- `room` resolves against **`config/rooms.yaml`**, not the bridge — only the abbreviations there are
+  addressable (`6std` = studio, `5den`, `1bed`, …). Scene names match **exactly** (`Fairfax`, not `fairfax`).
+- **There is no colour endpoint.** Colour reaches the bridge only as a pre-existing scene; room power
+  writes `{"on": …}` only.
+- **Scene artwork is not fetchable from the bridge** (`metadata.image` is a `public_image` rid that
+  resolves only against Signify's CDN). The Stream Deck uses the `hue-scenes` icon pack instead.
+
 ## Layout
 
 ```
